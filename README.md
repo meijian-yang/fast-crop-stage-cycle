@@ -1,5 +1,6 @@
 # Fast crop stage and crop cycle models
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23173539.svg)](https://doi.org/10.5281/zenodo.23173539)
 [![Release](https://img.shields.io/github/v/release/meijian-yang/fast-crop-stage-cycle)](https://github.com/meijian-yang/fast-crop-stage-cycle/releases)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Python 3.13](https://img.shields.io/badge/python-3.13-blue.svg)](https://www.python.org/)
@@ -213,7 +214,13 @@ The crop cycle and crop stage models are by Dr. Ran Pelta (Agmatix / GrowersTech
 
 ## Citation and license
 
-Please cite the models:
+Please cite this software:
+
+- Yang, M. (2026). *Fast crop stage and crop cycle models*. Zenodo. https://doi.org/10.5281/zenodo.23173539
+
+This DOI always points to the latest version; each release also has its own DOI on Zenodo. GitHub's "Cite this repository" button gives the same reference in other formats.
+
+and the models it re-implements:
 
 - Pelta, R. (2026). *Crop Cycle Detection*. NASA Harvest / Agmatix. https://github.com/nasaharvest/crop-cycle-detection
 - Pelta, R. (2026). *Crop Stage Detection*. NASA Harvest / Agmatix. https://github.com/nasaharvest/crop-stage-detection

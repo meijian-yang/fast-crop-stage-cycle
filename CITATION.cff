@@ -8,6 +8,14 @@ authors:
   - family-names: Yang
     given-names: Meijian
     affiliation: "Columbia University & NASA GISS"
+doi: "10.5281/zenodo.23173539"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23173539"
+    description: "Concept DOI: all versions, resolves to the latest"
+  - type: doi
+    value: "10.5281/zenodo.23173540"
+    description: "Version 1.0.1"
 repository-code: "https://github.com/meijian-yang/fast-crop-stage-cycle"
 license: Apache-2.0
 abstract: >-
