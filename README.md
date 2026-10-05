@@ -1,5 +1,10 @@
 # Fast crop stage and crop cycle models
 
+[![Release](https://img.shields.io/github/v/release/meijian-yang/fast-crop-stage-cycle)](https://github.com/meijian-yang/fast-crop-stage-cycle/releases)
+[![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
+[![Python 3.13](https://img.shields.io/badge/python-3.13-blue.svg)](https://www.python.org/)
+[![Built on NASA Harvest models](https://img.shields.io/badge/models-NASA%20Harvest%20%2F%20Agmatix-2a78d6.svg)](https://github.com/nasaharvest)
+
 This package provides fast re-implementations of two NASA Harvest / Agmatix models that read crop growth from an NDVI time series:
 
 - [crop-cycle-detection](https://github.com/nasaharvest/crop-cycle-detection) finds the season start, green-up, NDVI peak and season end.
