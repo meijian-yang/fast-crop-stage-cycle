@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below, together with the NASA Harvest / Agmatix models it re-implements."
+type: software
+title: "Fast crop stage and crop cycle models"
+version: "1.0.1"
+date-released: "2026-10-05"
+authors:
+  - family-names: Yang
+    given-names: Meijian
+    affiliation: "Columbia University & NASA GISS"
+repository-code: "https://github.com/meijian-yang/fast-crop-stage-cycle"
+license: Apache-2.0
+abstract: >-
+  Fast numba re-implementations of the NASA Harvest / Agmatix crop-cycle-detection
+  and crop-stage-detection models, giving identical results about 65-650 times
+  faster, plus a pipeline that maps crop cycle dates and weekly crop stage for corn
+  and soybean at 30 m, 1 km and 9 km from Sentinel-2 + Landsat NDVI in Google Earth
+  Engine.
+keywords:
+  - remote sensing
+  - crop phenology
+  - crop monitoring
+  - NDVI
+  - Sentinel-2
+  - Landsat
+  - Google Earth Engine
+  - numba
+references:
+  - type: software
+    title: "Crop Cycle Detection"
+    authors:
+      - family-names: Pelta
+        given-names: Ran
+    year: 2026
+    url: "https://github.com/nasaharvest/crop-cycle-detection"
+  - type: software
+    title: "Crop Stage Detection"
+    authors:
+      - family-names: Pelta
+        given-names: Ran
+    year: 2026
+    url: "https://github.com/nasaharvest/crop-stage-detection"
