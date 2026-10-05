@@ -204,7 +204,7 @@ Dates are day of year counted from Jan 1 of `<year>`. If a pixel has more than o
 
 **Meijian Yang, PhD**, Columbia University & NASA GISS: the fast re-implementations (`fast_cycle.py`, `fast_stage.py`, `fast_models.py`), the gridded pipeline and NDVI processing.
 
-The crop cycle and crop stage models are by Ran Pelta (Agmatix / GrowersTech, NASA Harvest).
+The crop cycle and crop stage models are by Dr. Ran Pelta (Agmatix / GrowersTech, NASA Harvest).
 
 ## Citation and license
 
