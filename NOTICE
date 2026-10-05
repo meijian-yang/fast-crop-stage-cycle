@@ -1,0 +1,28 @@
+Gridded crop stage and crop cycle products from Sentinel-2 + Landsat NDVI
+Copyright 2026 Meijian Yang, Columbia University & NASA GISS
+
+This package uses and adapts software from NASA Harvest / Agmatix:
+
+  Crop Stage Detection
+    https://github.com/nasaharvest/crop-stage-detection (commit 2005f53)
+    Copyright 2026 Ran Pelta, Agmatix / GrowersTech
+    Licensed under the Apache License, Version 2.0.
+    fast_stage.py is a modified re-implementation of src/crop_stage.py: the
+    preprocessing and stage rules were re-written as numba-compiled functions
+    with default parameters. The algorithm and thresholds are unchanged;
+    validate_fast_stage.py checks that both give identical stages.
+    gee_ndvi.py follows the NDVI recipe of src/gee_fetch.py (Cloud Score+ and
+    QA_PIXEL masking) but is a separate gridded implementation.
+
+  Crop Cycle Detection
+    https://github.com/nasaharvest/crop-cycle-detection (commit 293f906)
+    Copyright 2026 Ran Pelta, Agmatix / GrowersTech
+    Licensed under the Apache License, Version 2.0.
+    fast_cycle.py is a modified re-implementation of src/crop_cycle.py and
+    src/ndvi_preprocessing.py: crop_cycle_model with its default parameters was
+    re-written as numba-compiled functions. The algorithm and thresholds are
+    unchanged; validate_fast_cycle.py checks that both give identical results.
+    The original is imported from a separate clone (not redistributed here)
+    for --cycle-impl original and validation.
+
+The full license text is in LICENSE.

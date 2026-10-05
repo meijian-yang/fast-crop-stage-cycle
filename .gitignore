@@ -1,0 +1,9 @@
+# NASA Harvest repos (clone separately, see README)
+external/
+# generated
+data/
+products/
+figures/
+logs/
+__pycache__/
+.DS_Store
