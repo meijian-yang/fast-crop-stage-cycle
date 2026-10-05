@@ -9,6 +9,20 @@ The re-implementations give **the same results as the original code** and run **
 
 The package also includes a pipeline that uses them to make **gridded maps** (30 m, 1 km and 9 km) of crop stage and crop cycle dates for corn and soybean, from Sentinel-2 + Landsat NDVI in Google Earth Engine. It has been run and checked for Boone County, Iowa (2023 and 2024) and Story County, Iowa (2024).
 
+## Example: Boone County, Iowa, 2024
+
+Date of peak greenness for every 30 m corn and soybean pixel (1.09 million pixels, under a minute of model time). Field-to-field differences show up clearly: corn peaks around Jul 20, soybean about three weeks later.
+
+![NDVI peak date at 30 m for corn and soybean, Boone County 2024](docs/boone_peak_30m_2024.png)
+
+Crop stage on four NASS crop-progress weeks, using only imagery available by each date. Stages run from A (bare soil) through E (post-harvest).
+
+![Weekly crop stage at 30 m for corn and soybean, Boone County 2024](docs/boone_stage_maps_30m_2024.png)
+
+Share of crop pixels in each stage across the season. Soybean runs about two weeks behind corn.
+
+![Share of 30 m crop pixels in each stage by week, Boone County 2024](docs/boone_stage_timeline_2024.png)
+
 ## Using the fast models on your own data
 
 Copy `fast_models.py`, `fast_cycle.py` and `fast_stage.py`. They only need numpy, pandas, numba and scipy (numba uses scipy for linear algebra):
@@ -188,7 +202,7 @@ Dates are day of year counted from Jan 1 of `<year>`. If a pixel has more than o
 
 ## Authors
 
-Meijian Yang, Columbia University & NASA GISS: the fast re-implementations (`fast_cycle.py`, `fast_stage.py`, `fast_models.py`), the gridded pipeline and NDVI processing.
+**Meijian Yang**, Columbia University & NASA GISS: the fast re-implementations (`fast_cycle.py`, `fast_stage.py`, `fast_models.py`), the gridded pipeline and NDVI processing.
 
 The crop cycle and crop stage models are by Ran Pelta (Agmatix / GrowersTech, NASA Harvest).
 
