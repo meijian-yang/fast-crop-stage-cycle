@@ -12,7 +12,7 @@ in one call. The algorithm and thresholds are unchanged.
 Reproduces, step for step, what run_models.run_cell does with the original code
 for each week ending ``wend``:
 
-  sub = obs with day + 2 <= wend and day > wend - lookback      (run_models)
+  sub = obs with day + lag <= wend and day > wend - lookback    (run_models: lag=2)
   run_crop_stage_from_dataframe(sub)                              (crop_stage.py)
     smooth_daily_interpolate_ndvi: daily resample, PCHIP gap-fill
         (scipy PchipInterpolator), Whittaker smooth (lam=6000, d=2)
@@ -212,15 +212,20 @@ def _stage_code(z):
 
 
 @njit(cache=True)
-def stage_weeks(days, ndvi, week_ends, lookback):
-    """Stage code per week for one pixel. days must be sorted, unique integers."""
+def stage_weeks(days, ndvi, week_ends, lookback, lag=2):
+    """Stage code per week for one pixel. days must be sorted, unique integers.
+
+    For each date in week_ends, uses observations with day + lag <= date and
+    day > date - lookback. lag=2 is for 5-day composites dated at their centre
+    (only bins complete by that date); use lag=0 for dated observations.
+    """
     out = np.zeros(len(week_ends), np.uint8)
     for j in range(len(week_ends)):
         we = week_ends[j]
         lo = -1
         hi = -1
         for i in range(len(days)):
-            if days[i] + 2 <= we and days[i] > we - lookback:
+            if days[i] + lag <= we and days[i] > we - lookback:
                 if lo < 0:
                     lo = i
                 hi = i
